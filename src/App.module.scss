@@ -1,0 +1,96 @@
+.app {
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.background {
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.black-animation {
+  fill: none;
+  stroke: #222222;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.black {
+  fill: none;
+  stroke: #222222;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+}
+.red {
+  fill: none;
+  stroke-width: 12;
+  stroke: rgb(245, 23, 103);
+}
+
+.upload {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #222222;
+  background: #ffffff;
+  font-size: 32px;
+}
+
+.editorWrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #222222;
+  background: #ffffff;
+}
+
+.buttonWrapper {
+  width: 100%;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.editorButton {
+  padding: 12px;
+  color: #ffffff;
+  background: #222222;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background: #535353;
+  }
+}
+
+.editorLinkDownload {
+  text-decoration: none;
+  
+}
